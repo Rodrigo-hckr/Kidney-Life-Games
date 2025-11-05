@@ -34,83 +34,83 @@
   </header>
 
   <main class="tech-main">
+   
     <form class="tech-card" onsubmit="event.preventDefault(); calificarTrivia();">
-      <ol>
-        <li>¿Cuál es una buena fuente de proteína para personas con enfermedad renal?
-          <br>
-          <label><input type="radio" name="q1" value="a"> Tocino</label><br>
-          <label><input type="radio" name="q1" value="b"> Clara de huevo</label><br>
-          <label><input type="radio" name="q1" value="c"> Embutidos</label><br>
-        </li><br>
 
-        <li>¿Qué bebida es la mejor para mantener la hidratación renal?
-          <br>
-          <label><input type="radio" name="q2" value="a"> Agua</label><br>
-          <label><input type="radio" name="q2" value="b"> Refresco</label><br>
-          <label><input type="radio" name="q2" value="c"> Jugo envasado</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>1.</strong> ¿Cuál es una buena fuente de proteína para personas con enfermedad renal?</p>
+            <label><input type="radio" name="q1" value="a"> Tocino</label>
+            <label><input type="radio" name="q1" value="b"> Clara de huevo</label>
+            <label><input type="radio" name="q1" value="c"> Embutidos</label>
+        </div>
 
-        <li>¿Qué fruta es baja en potasio?
-          <br>
-          <label><input type="radio" name="q3" value="a"> Plátano</label><br>
-          <label><input type="radio" name="q3" value="b"> Naranja</label><br>
-          <label><input type="radio" name="q3" value="c"> Manzana</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>2.</strong> ¿Qué bebida es la mejor para mantener la hidratación renal?</p>
+            <label><input type="radio" name="q2" value="a"> Agua</label>
+            <label><input type="radio" name="q2" value="b"> Refresco</label>
+            <label><input type="radio" name="q2" value="c"> Jugo envasado</label>
+        </div>
 
-        <li>¿Qué tipo de pan es mejor para una dieta baja en fósforo?
-          <br>
-          <label><input type="radio" name="q4" value="a"> Pan blanco</label><br>
-          <label><input type="radio" name="q4" value="b"> Pan integral</label><br>
-          <label><input type="radio" name="q4" value="c"> Pan de centeno</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>3.</strong> ¿Qué fruta es baja en potasio?</p>
+            <label><input type="radio" name="q3" value="a"> Plátano</label>
+            <label><input type="radio" name="q3" value="b"> Naranja</label>
+            <label><input type="radio" name="q3" value="c"> Manzana</label>
+        </div>
 
-        <li>¿Cuál de estos alimentos es alto en sodio?
-          <br>
-          <label><input type="radio" name="q5" value="a"> Zanahoria</label><br>
-          <label><input type="radio" name="q5" value="b"> Arroz blanco</label><br>
-          <label><input type="radio" name="q5" value="c"> Manzana</label><br>
-          <label><input type="radio" name="q5" value="d"> Sopa enlatada</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>4.</strong> ¿Qué tipo de pan es mejor para una dieta baja en fósforo?</p>
+            <label><input type="radio" name="q4" value="a"> Pan blanco</label>
+            <label><input type="radio" name="q4" value="b"> Pan integral</label>
+            <label><input type="radio" name="q4" value="c"> Pan de centeno</label>
+        </div>
 
-        <li>¿Qué mineral debe controlarse en pacientes con enfermedad renal?
-          <br>
-          <label><input type="radio" name="q6" value="a"> Hierro</label><br>
-          <label><input type="radio" name="q6" value="b"> Fósforo</label><br>
-          <label><input type="radio" name="q6" value="c"> Zinc</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>5.</strong> ¿Cuál de estos alimentos es alto en sodio?</p>
+            <label><input type="radio" name="q5" value="a"> Zanahoria</label>
+            <label><input type="radio" name="q5" value="b"> Arroz blanco</label>
+            <label><input type="radio" name="q5" value="c"> Manzana</label>
+            <label><input type="radio" name="q5" value="d"> Sopa enlatada</label>
+        </div>
 
-        <li>¿Qué bebida debe evitarse por su alto contenido en potasio?
-          <br>
-          <label><input type="radio" name="q7" value="a"> Agua con gas</label><br>
-          <label><input type="radio" name="q7" value="b"> Té verde</label><br>
-          <label><input type="radio" name="q7" value="c"> Jugo de naranja</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>6.</strong> ¿Qué mineral debe controlarse en pacientes con enfermedad renal?</p>
+            <label><input type="radio" name="q6" value="a"> Hierro</label>
+            <label><input type="radio" name="q6" value="b"> Fósforo</label>
+            <label><input type="radio" name="q6" value="c"> Zinc</label>
+        </div>
 
-        <li>¿Qué vegetal es bajo en potasio?
-          <br>
-          <label><input type="radio" name="q8" value="a"> Pepino</label><br>
-          <label><input type="radio" name="q8" value="b"> Papa</label><br>
-          <label><input type="radio" name="q8" value="c"> Tomate</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>7.</strong> ¿Qué bebida debe evitarse por su alto contenido en potasio?</p>
+            <label><input type="radio" name="q7" value="a"> Agua con gas</label>
+            <label><input type="radio" name="q7" value="b"> Té verde</label>
+            <label><input type="radio" name="q7" value="c"> Jugo de naranja</label>
+        </div>
 
-        <li>¿Qué tipo de lácteo es mejor para una dieta renal?
-          <br>
-          <label><input type="radio" name="q9" value="a"> Leche entera</label><br>
-          <label><input type="radio" name="q9" value="b"> Yogur griego</label><br>
-          <label><input type="radio" name="q9" value="c"> Queso curado</label><br>
-          <label><input type="radio" name="q9" value="d"> Leche de arroz</label><br>
-        </li><br>
+        <div class="tech-question">
+            <p><strong>8.</strong> ¿Qué vegetal es bajo en potasio?</p>
+            <label><input type="radio" name="q8" value="a"> Pepino</label>
+            <label><input type="radio" name="q8" value="b"> Papa</label>
+            <label><input type="radio" name="q8" value="c"> Tomate</label>
+        </div>
 
-        <li>¿Qué condimento es más bajo en sodio?
-          <br>
-          <label><input type="radio" name="q10" value="a"> Salsa de soya</label><br>
-          <label><input type="radio" name="q10" value="b"> Limón</label><br>
-          <label><input type="radio" name="q10" value="c"> Mostaza</label><br>
-        </li><br>
-      </ol>
+        <div class="tech-question">
+            <p><strong>9.</strong> ¿Qué tipo de lácteo es mejor para una dieta renal?</p>
+            <label><input type="radio" name="q9" value="a"> Leche entera</label>
+            <label><input type="radio" name="q9" value="b"> Yogur griego</label>
+            <label><input type="radio" name="q9" value="c"> Queso curado</label>
+            <label><input type="radio" name="q9" value="d"> Leche de arroz</label>
+        </div>
 
-      <button type="submit" class="tech-button">Calificar</button>
-      <div id="resultado" style="margin-top: 1.5rem;"></div>
+        <div class="tech-question">
+            <p><strong>10.</strong> ¿Qué condimento es más bajo en sodio?</p>
+            <label><input type="radio" name="q10" value="a"> Salsa de soya</label>
+            <label><input type="radio" name="q10" value="b"> Limón</label>
+            <label><input type="radio" name="q10" value="c"> Mostaza</label>
+        </div>
+
+        <button type="submit" class="tech-button">Calificar</button>
+        <div id="resultado" style="margin-top: 1.5rem;"></div>
     </form>
   </main>
 
