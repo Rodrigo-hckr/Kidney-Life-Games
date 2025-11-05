@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Renal</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="/static/img/logo-placeholder.png" alt="Kidney Life Logo" class="logo">
+        <h1>Trivia Renal</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>{{ question.question }}</h2>
+            <p><strong>Respuesta:</strong> {{ question.answer }}</p>
+            <a href="/trivia"><button>Otra pregunta</button></a>
+            <a href="/"><button>Volver al inicio</button></a>
+        </div>
+    </div>
+</body>
+</html>
