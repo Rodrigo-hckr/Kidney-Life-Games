@@ -1,22 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Trivia Renal</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8">
+  <title>Trivia de Nutrición Renal</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script>
+    function calificarTrivia() {
+      const respuestasCorrectas = [
+        "b", "a", "c", "a", "d",
+        "b", "c", "a", "d", "b"
+      ];
+      let score = 0;
+      for (let i = 1; i <= 10; i++) {
+        const opciones = document.getElementsByName("q" + i);
+        for (let j = 0; j < opciones.length; j++) {
+          if (opciones[j].checked && opciones[j].value === respuestasCorrectas[i - 1]) {
+            score++;
+          }
+        }
+      }
+      document.getElementById("resultado").innerHTML =
+        `<h3>Obtuviste ${score} de 10 respuestas correctas.</h3>`;
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <img src="/static/img/logo-placeholder.png" alt="Kidney Life Logo" class="logo">
-        <h1>Trivia Renal</h1>
-    </header>
-    <div class="container">
-        <div class="card">
-            <h2>{{ question.question }}</h2>
-            <p><strong>Respuesta:</strong> {{ question.answer }}</p>
-            <a href="/trivia"><button>Otra pregunta</button></a>
-            <a href="/"><button>Volver al inicio</button></a>
-        </div>
+  <header class="tech-header">
+    <div class="logo-container">
+      <img src="/static/img/logo-placeholder.png" alt="Kidney Life Logo" class="logo">
+      <h1>Trivia de Nutrición Renal</h1>
     </div>
+    <p class="subtitle">Responde las preguntas y mide tus conocimientos</p>
+  </header>
+
+  <main class="tech-main">
+    <form class="tech-card" onsubmit="event.preventDefault(); calificarTrivia();">
+      <ol>
+        <li>¿Cuál es una buena fuente de proteína para personas con enfermedad renal?
+          <br>
+          <label><input type="radio" name="q1" value="a"> Tocino</label><br>
+          <label><input type="radio" name="q1" value="b"> Clara de huevo</label><br>
+          <label><input type="radio" name="q1" value="c"> Embutidos</label><br>
+        </li><br>
+
+        <li>¿Qué bebida es la mejor para mantener la hidratación renal?
+          <br>
+          <label><input type="radio" name="q2" value="a"> Agua</label><br>
+          <label><input type="radio" name="q2" value="b"> Refresco</label><br>
+          <label><input type="radio" name="q2" value="c"> Jugo envasado</label><br>
+        </li><br>
+
+        <li>¿Qué fruta es baja en potasio?
+          <br>
+          <label><input type="radio" name="q3" value="a"> Plátano</label><br>
+          <label><input type="radio" name="q3" value="b"> Naranja</label><br>
+          <label><input type="radio" name="q3" value="c"> Manzana</label><br>
+        </li><br>
+
+        <li>¿Qué tipo de pan es mejor para una dieta baja en fósforo?
+          <br>
+          <label><input type="radio" name="q4" value="a"> Pan blanco</label><br>
+          <label><input type="radio" name="q4" value="b"> Pan integral</label><br>
+          <label><input type="radio" name="q4" value="c"> Pan de centeno</label><br>
+        </li><br>
+
+        <li>¿Cuál de estos alimentos es alto en sodio?
+          <br>
+          <label><input type="radio" name="q5" value="a"> Zanahoria</label><br>
+          <label><input type="radio" name="q5" value="b"> Arroz blanco</label><br>
+          <label><input type="radio" name="q5" value="c"> Manzana</label><br>
+          <label><input type="radio" name="q5" value="d"> Sopa enlatada</label><br>
+        </li><br>
+
+        <li>¿Qué mineral debe controlarse en pacientes con enfermedad renal?
+          <br>
+          <label><input type="radio" name="q6" value="a"> Hierro</label><br>
+          <label><input type="radio" name="q6" value="b"> Fósforo</label><br>
+          <label><input type="radio" name="q6" value="c"> Zinc</label><br>
+        </li><br>
+
+        <li>¿Qué bebida debe evitarse por su alto contenido en potasio?
+          <br>
+          <label><input type="radio" name="q7" value="a"> Agua con gas</label><br>
+          <label><input type="radio" name="q7" value="b"> Té verde</label><br>
+          <label><input type="radio" name="q7" value="c"> Jugo de naranja</label><br>
+        </li><br>
+
+        <li>¿Qué vegetal es bajo en potasio?
+          <br>
+          <label><input type="radio" name="q8" value="a"> Pepino</label><br>
+          <label><input type="radio" name="q8" value="b"> Papa</label><br>
+          <label><input type="radio" name="q8" value="c"> Tomate</label><br>
+        </li><br>
+
+        <li>¿Qué tipo de lácteo es mejor para una dieta renal?
+          <br>
+          <label><input type="radio" name="q9" value="a"> Leche entera</label><br>
+          <label><input type="radio" name="q9" value="b"> Yogur griego</label><br>
+          <label><input type="radio" name="q9" value="c"> Queso curado</label><br>
+          <label><input type="radio" name="q9" value="d"> Leche de arroz</label><br>
+        </li><br>
+
+        <li>¿Qué condimento es más bajo en sodio?
+          <br>
+          <label><input type="radio" name="q10" value="a"> Salsa de soya</label><br>
+          <label><input type="radio" name="q10" value="b"> Limón</label><br>
+          <label><input type="radio" name="q10" value="c"> Mostaza</label><br>
+        </li><br>
+      </ol>
+
+      <button type="submit" class="tech-button">Calificar</button>
+      <div id="resultado" style="margin-top: 1.5rem;"></div>
+    </form>
+  </main>
+
+  <footer class="tech-footer">
+    <p>&copy; 2025 Kidney Life. Plataforma educativa sin almacenamiento de datos.</p>
+  </footer>
 </body>
 </html>
