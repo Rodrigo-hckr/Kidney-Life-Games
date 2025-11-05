@@ -2,21 +2,29 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Kidney Life - Juegos</title>
+    <title>Kidney Life - Plataforma de Juegos</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <header>
-        <img src="/static/img/logo-placeholder.png" alt="Kidney Life Logo" class="logo">
-        <h1>Bienvenido a Kidney Life</h1>
-        <p>Aprende sobre salud renal jugando</p>
-    </header>
-    <div class="container">
-        <div class="card">
-            <h2>Juego de Trivia Renal</h2>
-            <p>¿Cuánto sabes sobre tus riñones?</p>
-            <a href="{{ url_for('trivia') }}"><button>Jugar ahora</button></a>
+    <header class="tech-header">
+        <div class="logo-container">
+            <img src="/static/img/kidneylife.png" alt="Kidney Life Logo" class="logo">
+            <h1>Kidney Life</h1>
         </div>
-    </div>
+        <p class="subtitle">Plataforma interactiva para la salud renal</p>
+    </header>
+
+    <main class="tech-main">
+        <section class="tech-card">
+            <h2>🎮 Trivia Renal</h2>
+            <p>Explora tus conocimientos sobre los riñones y hábitos saludables.</p>
+            <a href="{{ url_for('trivia') }}"><button class="tech-button">Jugar ahora</button></a>
+        </section>
+    </main>
+
+    <footer class="tech-footer">
+        <p>&copy; 2025 Kidney Life. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
+
